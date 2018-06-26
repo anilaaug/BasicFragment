@@ -12,7 +12,7 @@ public class WebActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
         webView=findViewById(R.id.webview);
-        webView.loadUrl("https://github.com");
+        webView.loadUrl("https://www.animalplanet.com");
 
 
 

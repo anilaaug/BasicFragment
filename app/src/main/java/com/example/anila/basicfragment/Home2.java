@@ -18,7 +18,7 @@ public class Home2 extends AppCompatActivity{
     };
     private final Fragment[] PAGES = new Fragment[] {
             new Grid(),
-            new List()
+            new MyListFragment()
 
     };
     ViewPager viewPager;

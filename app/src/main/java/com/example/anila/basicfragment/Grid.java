@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-
-
 public class Grid extends Fragment {
 
     public Grid() {
@@ -23,7 +21,6 @@ public class Grid extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -38,14 +35,5 @@ public class Grid extends Fragment {
            }
        });
         return view;
-
-
     }
-
-
-
-
-
-
-
 }

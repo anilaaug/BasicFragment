@@ -41,7 +41,6 @@ public class ImageAdapter extends BaseAdapter {
 
     public View getView(final int position, View convertView, ViewGroup parent) {
         ImageView mainView, imgButton;
-
         final View grid;
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -52,8 +51,9 @@ public class ImageAdapter extends BaseAdapter {
         mainView = grid.findViewById(R.id.mainImage);
         imgButton = grid.findViewById(R.id.closebutton);
         mainView.setImageResource(mThumbIds.get(position));
+
         mainView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        mainView.setPadding(8, 8, 8, 8);
+        mainView.setPadding(4, 4, 4, 4);
         imgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,9 +80,5 @@ public class ImageAdapter extends BaseAdapter {
         });
         return grid;
     }
-
 }
-
-
-
 
