@@ -1,42 +1,41 @@
 package com.example.anila.basicfragment;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-public class Home extends AppCompatActivity {
+public class Home2 extends AppCompatActivity{
 
 
     private final String[] PAGE_TITLES = new String[] {
-            "Login",
-            "Signup"
+            "Grid",
+            "List"
 
     };
     private final Fragment[] PAGES = new Fragment[] {
-            new Login(),
-            new Signup()
+            new Grid(),
+            new List()
 
     };
     ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        viewPager=findViewById(R.id.viewPager);
+        setContentView(R.layout.home_activity);
+        viewPager=findViewById(R.id.grid_viewpager);
         viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
         getSupportActionBar().hide();
-        TabLayout tabLayout = findViewById(R.id.tab);
+        TabLayout tabLayout = findViewById(R.id.grid_tab);
         tabLayout.setupWithViewPager(viewPager);
         for(int i=0;i<PAGE_TITLES.length;i++){
             tabLayout.getTabAt(i).setText(PAGE_TITLES[i]);
         }
 
     }
-
 
     class MyPagerAdapter extends FragmentPagerAdapter {
 
@@ -55,4 +54,4 @@ public class Home extends AppCompatActivity {
         }
     }
 
-    }
+}

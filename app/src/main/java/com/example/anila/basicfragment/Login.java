@@ -48,8 +48,8 @@ public class Login extends Fragment {
                 loginPassword = passWord.getText().toString().trim();
                 //Validation of the Email and password in the login page
                 if (loginName.equals(UserDetails.getEmail()) && loginPassword.equals(UserDetails.getConfirmPassWord())) {
-                    Intent myIntent=new Intent(getContext(),Profile.class);
-                    Login.this.startActivity(myIntent);
+                    Intent myIntent=new Intent(getContext(),Home2.class);
+                    startActivity(myIntent);
                 }
             }
         });
@@ -57,21 +57,7 @@ public class Login extends Fragment {
     }
 
 
-    public void onButtonPressed(Uri uri) {
 
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-
-    }
 
 
 }

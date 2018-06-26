@@ -19,7 +19,6 @@ import java.util.regex.Pattern;
 
 public class Signup extends Fragment {
 
-    private OnFragmentInteractionListener mListener;
     Button submit;
     EditText firstName, lastName, email, phoneNo, dateOfBirth, passWord, confirmPass;
     String userFirstName, userLastName, userPhoneno, userEmail, userDob, confirmPassword;
@@ -115,25 +114,9 @@ public class Signup extends Fragment {
         return view;
     }
 
-    public void onButtonPressed(Uri uri) {
 
-    }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
+
 
 
 }
