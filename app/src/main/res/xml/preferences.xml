@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="example_key"
+        android:title="@string/general">
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/storage"
+            android:entryValues="@array/storage"
+            android:key="list_preference_1"
+            android:summary="My Videos"
+            android:title="Default Storgae" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="check_box_preference_1"
+            android:summary="upload the videos when wifi is available "
+            android:title="Auto upload" />
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/upload_quality"
+            android:entryValues="@array/upload_quality"
+            android:key="list_preference_2"
+            android:summary="specify video quality for uploads"
+            android:title=" Upload Quality" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:enabled="true"
+        android:key="example_key"
+        android:title="@string/notification">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="switch_preference_1"
+            android:title="New message notification" />
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/Ringtone"
+            android:entryValues="@array/Ringtone"
+            android:key="list_preference_3"
+            android:summary="New Morning"
+            android:title="Ringtone" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="switch_preference_2"
+            android:title="Vibrate" />
+    </PreferenceCategory>
+        <PreferenceCategory android:title="About">
+            <Preference
+                android:selectable="false"
+                android:summary="@string/summary_about" />
+            <Preference
+                android:summary="@string/app_version"
+                android:title="@string/title_version" />
+
+            <!-- preference opens url in browser -->
+            <EditTextPreference
+                android:defaultValue="Feedback"
+                android:key="edit_text_preference_1"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:summary="Got any queries?We are happy to help!"
+                android:title="Send Feedback" />
+            <Preference
+                android:summary="@string/summary_faq"
+                android:title="@string/title_faq">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="@string/url_faq" />
+            </Preference>
+
+            <Preference android:title="@string/privacy_policy">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="@string/url_privacy" />
+            </Preference>
+
+            <Preference android:title="@string/title_terms">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="@string/url_terms" />
+            </Preference>
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

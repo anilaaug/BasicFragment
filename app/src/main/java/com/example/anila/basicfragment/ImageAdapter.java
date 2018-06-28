@@ -18,13 +18,10 @@ public class ImageAdapter extends BaseAdapter {
 
     private Context mContext;
      ImageAdapter imageAdapter=this;
-    public List<Integer> mThumbIds = new ArrayList<>(Arrays.asList
-            (R.drawable.sample_bird,R.drawable.sample_bear,
-            R.drawable.sample_cat,R.drawable.sample_dog,R.drawable.sample_ucbrowser,
-                    R.drawable.sample_wild));
-
-    public ImageAdapter(Context c) {
+    List<Integer>mThumbIds=new ArrayList<Integer>();
+    public ImageAdapter(Context c,List<Integer> images) {
         mContext = c;
+        mThumbIds=images;
     }
 
     public int getCount() {
@@ -42,16 +39,12 @@ public class ImageAdapter extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         ImageView mainView, imgButton;
         final View grid;
-        if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             grid = inflater.inflate(R.layout.custom_layout, null);
-        } else {
-            grid = convertView;
-        }
+
         mainView = grid.findViewById(R.id.mainImage);
         imgButton = grid.findViewById(R.id.closebutton);
         mainView.setImageResource(mThumbIds.get(position));
-
         mainView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         mainView.setPadding(4, 4, 4, 4);
         imgButton.setOnClickListener(new View.OnClickListener() {

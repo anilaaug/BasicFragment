@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.anila.basicfragment.model.Profile;
+import com.example.anila.basicfragment.model.UserDetails;
+
 public class Login extends Fragment {
 
     Button loginButton;
@@ -46,8 +49,9 @@ public class Login extends Fragment {
             public void onClick(View view) {
                 loginName = userName.getText().toString().trim();
                 loginPassword = passWord.getText().toString().trim();
+
                 //Validation of the Email and password in the login page
-                if (loginName.equals(UserDetails.getEmail()) && loginPassword.equals(UserDetails.getConfirmPassWord())) {
+                if (loginName.equals(UserDetails.getEmail()) &&loginPassword.equals(UserDetails.getConfirmPassWord())) {
                     Intent myIntent=new Intent(getContext(),Home2.class);
                     startActivity(myIntent);
                 }

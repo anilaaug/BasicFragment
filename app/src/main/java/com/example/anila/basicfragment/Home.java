@@ -28,7 +28,7 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         viewPager=findViewById(R.id.viewPager);
         viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
-        getSupportActionBar().hide();
+
         TabLayout tabLayout = findViewById(R.id.tab);
         tabLayout.setupWithViewPager(viewPager);
         for(int i=0;i<PAGE_TITLES.length;i++){

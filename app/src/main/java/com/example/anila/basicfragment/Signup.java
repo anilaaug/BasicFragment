@@ -13,6 +13,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.anila.basicfragment.model.UserDetails;
+
 import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -84,7 +86,7 @@ public class Signup extends Fragment {
                 }
                 else {
                     Toast.makeText(getContext(), "UserRegistration completed", Toast.LENGTH_SHORT).show();
-                    UserDetails ud = new UserDetails(userFirstName, userLastName, userPhoneno, userEmail, userDob, confirmPassword);
+                    UserDetails.setUserDetails(userFirstName, userLastName, userPhoneno, userEmail, userDob, confirmPassword);
                     //Intent myIntent = new Intent(SignUp.this, Login.class);
                     //SignUp.this.startActivity(myIntent);
                 }

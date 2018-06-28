@@ -55,7 +55,7 @@ public class MyListFragment extends Fragment {
         mdata.add(new Data( R.drawable.sample_bird, "Bird"));
         mdata.add(new Data( R.drawable.sample_cat, "Cat"));
         mdata.add(new Data( R.drawable.sample_dog, "Dog"));
-        mdata.add(new Data( R.drawable.sample_ucbrowser, "Squirral"));
+        mdata.add(new Data( R.drawable.sample_ucbrowser, "squirrel"));
         mdata.add(new Data( R.drawable.sample_wild, "Beach"));
     }
 

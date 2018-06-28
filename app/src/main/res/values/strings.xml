@@ -1,6 +1,108 @@
 <resources>
-    <string name="app_name">BasicFragment</string>
+    <string name="app_name">TestTwo</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="storage">
+        <item>My Videos</item>
+        <item>Downloads</item>
+        <item>Instagram</item>
+    </string-array>
+    <string-array name="upload_quality">
+        <item>360p</item>
+        <item>480p</item>
+        <item>720p</item>
+    </string-array>
+    <string-array name="Ringtone">
+        <item>New Morning</item>
+        <item>Perfect</item>
+        <item>Spring</item>
+        <item>Windmill</item>
+    </string-array>
+
+    <string name="general">General</string>
+    <string name="notification">Notifications</string>
+    <string-array name="multi_select_list_preference_default_value" />
+    <string name="summary_about">One of the most prominent changes in the Lollipop release is a redesigned user interface built around a design language known as Material Design.Other changes include improvements to the notifications,</string>
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="title_version">Version</string>
+    <string name="app_version">5.1</string>
+    <string name="title_send_feedback">Send Feedback</string>
+    <string name="summary_support">Got any queries? We are happy to help!</string>
+    <string name="key_send_feedback">key_send_feedback</string>
+    <string name="summary_faq">View frequently asked questions</string>
+    <string name="title_faq">FAQ</string>
+    <string name="url_faq">https://www.androidhive.info/privacy-policy/</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="url_privacy">https://www.androidhive.info/privacy-policy/</string>
+    <string name="title_terms">Terms and Conditions</string>
+    <string name="url_terms">https://www.androidhive.info/terms-of-service/</string>
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
 </resources>
