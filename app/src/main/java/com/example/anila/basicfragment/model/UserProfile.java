@@ -5,8 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.example.anila.basicfragment.R;
+import com.example.anila.basicfragment.model.UserDetails;
 
-public class Profile extends AppCompatActivity {
+public class UserProfile extends AppCompatActivity {
 
     TextView name,email,phone,dob,passWord;
 

@@ -9,7 +9,7 @@
             android:entryValues="@array/storage"
             android:key="list_preference_1"
             android:summary="My Videos"
-            android:title="Default Storgae" />
+            android:title="Default storage" />
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="check_box_preference_1"

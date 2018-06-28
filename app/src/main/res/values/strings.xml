@@ -82,7 +82,7 @@
     <string name="general">General</string>
     <string name="notification">Notifications</string>
     <string-array name="multi_select_list_preference_default_value" />
-    <string name="summary_about">One of the most prominent changes in the Lollipop release is a redesigned user interface built around a design language known as Material Design.Other changes include improvements to the notifications,</string>
+    <string name="summary_about">One of the most prominent changes in the Lollipop release is a redesigned user interface built around Material Design.Other changes include improvements to the notifications,</string>
     <string name="pref_title_system_sync_settings">System sync settings</string>
     <string name="title_version">Version</string>
     <string name="app_version">5.1</string>

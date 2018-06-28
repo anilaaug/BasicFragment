@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Grid">
+    tools:context=".app.image.GridFragment">
 
     <!-- TODO: Update blank fragment layout -->
 

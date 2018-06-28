@@ -1,4 +1,5 @@
-package com.example.anila.basicfragment;
+package com.example.anila.basicfragment.app.image;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,18 +11,20 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
+import com.example.anila.basicfragment.R;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ImageAdapter extends BaseAdapter {
 
+    List<Integer> mThumbIds = new ArrayList<Integer>();
     private Context mContext;
-     ImageAdapter imageAdapter=this;
-    List<Integer>mThumbIds=new ArrayList<Integer>();
-    public ImageAdapter(Context c,List<Integer> images) {
+    private ImageAdapter mImageAdapter = this;
+
+    public ImageAdapter(Context c, List<Integer> images) {
         mContext = c;
-        mThumbIds=images;
+        mThumbIds = images;
     }
 
     public int getCount() {
@@ -39,9 +42,8 @@ public class ImageAdapter extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         ImageView mainView, imgButton;
         final View grid;
-            LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            grid = inflater.inflate(R.layout.custom_layout, null);
-
+        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        grid = inflater.inflate(R.layout.custom_layout, null);
         mainView = grid.findViewById(R.id.mainImage);
         imgButton = grid.findViewById(R.id.closebutton);
         mainView.setImageResource(mThumbIds.get(position));
@@ -56,7 +58,7 @@ public class ImageAdapter extends BaseAdapter {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         mThumbIds.remove(position);
-                        imageAdapter.notifyDataSetChanged();
+                        mImageAdapter.notifyDataSetChanged();
                         Toast.makeText(mContext, "deleted position : " + position, Toast.LENGTH_SHORT).show();
                         return false;
                     }
@@ -67,7 +69,7 @@ public class ImageAdapter extends BaseAdapter {
         mainView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent=new Intent(mContext ,WebActivity.class);
+                Intent myIntent = new Intent(mContext, WebActivity.class);
                 mContext.startActivity(myIntent);
             }
         });

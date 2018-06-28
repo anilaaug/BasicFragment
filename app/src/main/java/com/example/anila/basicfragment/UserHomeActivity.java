@@ -8,31 +8,32 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Home extends AppCompatActivity {
+public class UserHomeActivity extends AppCompatActivity {
 
 
-    private final String[] PAGE_TITLES = new String[] {
+    private final String[] pageTitle = new String[]{
             "Login",
             "Signup"
 
     };
-    private final Fragment[] PAGES = new Fragment[] {
-            new Login(),
-            new Signup()
+    private final Fragment[] pageArray = new Fragment[]{
+            new LoginFragment(),
+            new SignupFragment()
 
     };
     ViewPager viewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        viewPager=findViewById(R.id.viewPager);
+        viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
 
         TabLayout tabLayout = findViewById(R.id.tab);
         tabLayout.setupWithViewPager(viewPager);
-        for(int i=0;i<PAGE_TITLES.length;i++){
-            tabLayout.getTabAt(i).setText(PAGE_TITLES[i]);
+        for (int i = 0; i < pageTitle.length; i++) {
+            tabLayout.getTabAt(i).setText(pageTitle[i]);
         }
 
     }
@@ -46,13 +47,13 @@ public class Home extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return PAGES[position];
+            return pageArray[position];
         }
 
         @Override
         public int getCount() {
-            return PAGES.length;
+            return pageArray.length;
         }
     }
 
-    }
+}

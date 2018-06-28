@@ -12,18 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- <activity android:name=".Home"></activity> -->
-        <activity android:name=".Home">
+        <!-- <activity android:name=".UserHomeActivity"></activity> -->
+        <activity android:name=".UserHomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".model.Profile" />
-        <activity android:name=".WebActivity"></activity>
-        <activity android:name=".Home2"></activity>
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".model.UserProfile" />
+        <activity android:name=".app.image.WebActivity"></activity>
+        <activity android:name=".app.image.ImageHomeActivity"></activity>
+        <activity android:name=".app.image.SettingsActivity"></activity>
 
     </application>
 

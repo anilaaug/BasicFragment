@@ -1,4 +1,5 @@
-package com.example.anila.basicfragment;
+package com.example.anila.basicfragment.app.image;
+
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -15,55 +16,56 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
+import com.example.anila.basicfragment.R;
+import com.example.anila.basicfragment.app.image.GridFragment;
+import com.example.anila.basicfragment.app.image.ListFragment;
+import com.example.anila.basicfragment.app.image.SettingsActivity;
 
-public class Home2 extends AppCompatActivity{
 
+public class ImageHomeActivity extends AppCompatActivity {
 
-    private final String[] PAGE_TITLES = new String[] {
+    private final String[] titleArray = new String[]{
             "Grid",
             "List"
 
     };
-    private final Fragment[] PAGES = new Fragment[] {
-            new Grid(),
-            new MyListFragment()
+    private final Fragment[] pageArray = new Fragment[]{
+            new GridFragment(),
+            new ListFragment()
 
     };
-    ViewPager mViewPager;
-    Toolbar mToolBar;
-    ImageView img;
+    private ViewPager mViewPager;
+    private Toolbar mToolBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
-        mViewPager=findViewById(R.id.grid_viewpager);
-        mToolBar=findViewById(R.id.toolbar);
-        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_settings_white);
+        mViewPager = findViewById(R.id.grid_viewpager);
+        mToolBar = findViewById(R.id.toolbar);
+        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_settings_white);
         mToolBar.setOverflowIcon(drawable);
         setSupportActionBar(mToolBar);
         getSupportActionBar().setTitle("TestTwo");
-
-
         mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
-
         TabLayout tabLayout = findViewById(R.id.grid_tab);
         tabLayout.setupWithViewPager(mViewPager);
-        for(int i=0;i<PAGE_TITLES.length;i++){
-            tabLayout.getTabAt(i).setText(PAGE_TITLES[i]);
+        for (int i = 0; i < titleArray.length; i++) {
+            tabLayout.getTabAt(i).setText(titleArray[i]);
         }
 
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.settings_menu,menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.settings_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent myIntent=new Intent(getApplicationContext(),SettingsActivity.class);
+        Intent myIntent = new Intent(getApplicationContext(), SettingsActivity.class);
         startActivity(myIntent);
         return true;
     }
@@ -76,12 +78,12 @@ public class Home2 extends AppCompatActivity{
 
         @Override
         public Fragment getItem(int position) {
-            return PAGES[position];
+            return pageArray[position];
         }
 
         @Override
         public int getCount() {
-            return PAGES.length;
+            return pageArray.length;
         }
     }
 
