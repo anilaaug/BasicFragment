@@ -13,6 +13,7 @@ import android.widget.ImageView;
 
 import com.example.anila.basicfragment.app.image.ImageHomeActivity;
 import com.example.anila.basicfragment.model.UserDetails;
+import com.example.anila.basicfragment.model.UserProfile;
 
 public class LoginFragment extends Fragment {
 
@@ -53,7 +54,7 @@ public class LoginFragment extends Fragment {
 
                 //Validation of the Email and password in the login page
                 if (mLoginName.equals(UserDetails.getEmail()) && mLoginPassword.equals(UserDetails.getConfirmPassWord())) {
-                    Intent myIntent = new Intent(getContext(), ImageHomeActivity.class);
+                    Intent myIntent = new Intent(getContext(), UserProfile.class);
                     startActivity(myIntent);
                 }
             }
